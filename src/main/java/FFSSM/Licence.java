@@ -5,37 +5,26 @@ package FFSSM;
 
 import java.time.LocalDate;
 
-public class Licence {
+import lombok.Getter;
+import lombok.Setter;
 
-    public Personne possesseur;
+public class Licence {
+    @Getter @Setter
+    public Plongeur possesseur;
 
     public String numero;
 
+    @Getter @Setter
     public LocalDate delivrance;
 
+    @Getter @Setter
     public Club club;
 
-    public Licence(Personne possesseur, String numero, LocalDate delivrance, Club club) {
+    public Licence(Plongeur possesseur, String numero, LocalDate delivrance, Club club) {
         this.possesseur = possesseur;
         this.numero = numero;
         this.delivrance = delivrance;
         this.club = club;
-    }
-
-    public Personne getPossesseur() {
-        return possesseur;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public LocalDate getDelivrance() {
-        return delivrance;
-    }
-
-    public Club getClub() {
-        return club;
     }
 
     /**

@@ -1,50 +1,31 @@
-/**
- * @(#) Site.java
- */
-
 package FFSSM;
 
-public class Site
-{
-	public String nom;
+import lombok.Data;
+import lombok.NonNull;
 
-	public Site(String nom, String details) {
-		this.nom = nom;
-		this.details = details;
+// On utilise lombok pour générer les getters et setters...
+// La bibliothèque est importée dans le fichier pom.xml
+
+// Lombok : génère getter / setter / constructeur, toString...
+// https://projectlombok.org/features/Data
+@Data
+public class Site {
+	@NonNull
+	private String nom;
+
+	@NonNull
+	private String details;
+
+	public static void main(String[] args) { // Un exemple des méthodes générées par lombok
+
+		// Constructeur avec les paramètres obligatoires
+		Site s = new Site("Site1", "Site1 details");
+
+		// Setters
+		s.setNom("Mont Saint Michel");
+		s.setDetails("Plongee autour du Mont Saint Michel");
+
+		// toString()
+		System.out.printf("Le site : %s\n", s);
 	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	
-		private String details;
-
-	/**
-	 * Get the value of details
-	 *
-	 * @return the value of details
-	 */
-	public String getDetails() {
-		return details;
-	}
-
-	/**
-	 * Set the value of details
-	 *
-	 * @param details new value of details
-	 */
-	public void setDetails(String details) {
-		this.details = details;
-	}
-
-	@Override
-	public String toString() {
-		return "Site{" + "nom=" + nom + ", details=" + details + '}';
-	}
-
-	
 }
