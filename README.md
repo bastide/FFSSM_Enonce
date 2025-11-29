@@ -5,6 +5,7 @@
 Ce projet consiste à implémenter en Java les classes issues du diagramme de classes UML de l'exercice FFSSM (Fédération Française de Sports Sous-Marins) et à écrire des tests unitaires significatifs.
 
 ![Diagramme UML FFSSM](./doc/uml.png)
+
 *Diagramme de classes UML du système FFSSM*
 
 ## Objectifs
